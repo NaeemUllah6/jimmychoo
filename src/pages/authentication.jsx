@@ -23,7 +23,7 @@ const Signin = () => {
         }}
       >
         <div className=" pt-[150px] gap-3 relative z-20">
-         <div className='flex gap-6 justify-center'>
+         <div className='flex flex-wrap gap-6 px-5 justify-center'>
          <div>
             <Login />
           </div>

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Header from "./layout/header";
 import Home from "./home";
 import Men from "./pages/Men";
@@ -6,19 +7,41 @@ import Women from "./pages/women";
 import Bridals from "./pages/bridals";
 import JcWorld from "./pages/jc-world";
 import Footer from "./layout/footer";
-import Login from "./pages/authentication"
+import Login from "./pages/authentication";
 import NewsletterSignup from "./pages/LandingPage-components/signup";
 import Wishlist from "./pages/cartOption/wishlist";
 import Signup from "./pages/Authentication/signup";
 
+function Loader() {
+    return (
+        <div className="fixed inset-0 flex justify-center items-center bg-white z-50">
+            <div className="w-12 h-12 border-4 border-gray-300 border-t-[#DFB83B] rounded-full animate-spin"></div>
+        </div>
+    );
+}
+
 function Layout() {
     const location = useLocation();
     const hideFooterRoutes = ["/login", "/signup"];
+    
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 1500); 
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) {
+        return <Loader />;
+    }
 
     return (
         <div>
             <Header />
-            <div className="max-w-1440px mx-auto ">
+            <div className="max-w-1440px mx-auto">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/men" element={<Men />} />
@@ -26,14 +49,14 @@ function Layout() {
                     <Route path="/bridals" element={<Bridals />} />
                     <Route path="/jc-world" element={<JcWorld />} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="/wishlist" element={<Wishlist/>} />
-                    <Route path="/singup" element={<Signup/>} />
+                    <Route path="/wishlist" element={<Wishlist />} />
+                    <Route path="/signup" element={<Signup />} />
                 </Routes>
             </div>
 
             {/* Hide Footer & NewsletterSignup on specific routes */}
             {!hideFooterRoutes.includes(location.pathname) && <NewsletterSignup />}
-             <Footer />
+            <Footer />
         </div>
     );
 }
