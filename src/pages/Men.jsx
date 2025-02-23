@@ -12,8 +12,8 @@ const filterOptions = [
 const Women = () => {
     return (
 <div>
-<div className="mt-28 sticky top-[108px] px-10 border-t border-gray-200 py-4 grid grid-cols-3 w-full justify-between items-center bg-white z-10">
-      <div className="flex gap-3 items-center">
+<div className="mt-28 sticky top-[108px] px-10 border-t border-gray-200 py-4 grid grid-cols-1 lg:grid-cols-3 w-full justify-between items-center bg-white z-10">
+      <div className="flex flex-wrap gap-3 items-center">
           {filterOptions.map((option, index) => (
               <Link key={index} className={`text-base  text-[#DFB83B] ${index === 0 ? 'font-bold' : 'font-medium'}`} to={option.link}>
                   {option.name}

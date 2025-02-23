@@ -63,7 +63,7 @@ const Drawer = () => {
 
                     {/* Logo */}
                     <div>
-                        <img height={50} width={200} src={headerLogo} alt="" />
+                        <img className="w-[100px] lg:w-[200px]" height={50} width={200} src={headerLogo} alt="" />
                     </div>
 
                     {/* Right Section */}
@@ -72,7 +72,7 @@ const Drawer = () => {
                         <Link to='/login'>
                             <i className={`fa fa-user ${isScrolled ? "text-black" : "text-[#DFB83B]"}`}></i>
                         </Link>
-                        <i className={`hidden md:block fa fa-shopping-cart ${isScrolled ? "text-black" : "text-[#DFB83B]"}`}></i>
+                        <i className={`!hidden md:block fa fa-shopping-cart ${isScrolled ? "text-black" : "text-[#DFB83B]"}`}></i>
                     </div>
                 </div>
             </header>
