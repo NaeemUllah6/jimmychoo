@@ -13,7 +13,7 @@ const SignIn = () => {
        </div>
   
        <div>
-       <button className="w-full bg-black text-white py-3 rounded font-bold">
+       <button className="w-full bg-black text-white py-3  font-bold">
           SIGN IN
         </button>
        </div>

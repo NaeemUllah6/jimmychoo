@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const SignIn = () => {
     return (
       <div className="bg-white px-10 py-4 rounded-lg shadow-md w-full max-w-md">
@@ -13,9 +15,11 @@ const SignIn = () => {
           <li style={{listStyle:'disc'}}> Faster Checkout</li>
         </ul>
   
-        <button className="w-full bg-black text-white py-3 rounded font-bold">
+        <div className="w-full flex justify-center bg-black px-[30px] text-white py-3  font-bold">
+        <Link to='/signup' className="">
           CREATE AN ACCOUNT
-        </button>
+        </Link>
+        </div>
       </div>
     );
   };

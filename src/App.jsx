@@ -8,6 +8,8 @@ import JcWorld from "./pages/jc-world";
 import Footer from "./layout/footer";
 import Login from "./pages/authentication"
 import NewsletterSignup from "./pages/LandingPage-components/signup";
+import Wishlist from "./pages/cartOption/wishlist";
+import Signup from "./pages/Authentication/signup";
 
 function Layout() {
     const location = useLocation();
@@ -24,6 +26,8 @@ function Layout() {
                     <Route path="/bridals" element={<Bridals />} />
                     <Route path="/jc-world" element={<JcWorld />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/wishlist" element={<Wishlist/>} />
+                    <Route path="/singup" element={<Signup/>} />
                 </Routes>
             </div>
 
