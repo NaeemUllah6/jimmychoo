@@ -11,6 +11,7 @@ import Login from "./pages/authentication";
 import NewsletterSignup from "./pages/LandingPage-components/signup";
 import Wishlist from "./pages/cartOption/wishlist";
 import Signup from "./pages/Authentication/signup";
+import LocationLocator from './pages/Authentication/locationlocator'
 
 function Loader() {
     return (
@@ -23,13 +24,13 @@ function Loader() {
 function Layout() {
     const location = useLocation();
     const hideFooterRoutes = ["/login", "/signup"];
-    
+
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 1500); 
+        }, 1500);
 
         return () => clearTimeout(timer);
     }, []);
@@ -40,7 +41,9 @@ function Layout() {
 
     return (
         <div>
-            <Header />
+            <div className="z-30">
+                <Header />
+            </div>
             <div className="max-w-1440px mx-auto">
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -51,16 +54,17 @@ function Layout() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/wishlist" element={<Wishlist />} />
                     <Route path="/signup" element={<Signup />} />
+                    <Route path="/locationLocator" element={<LocationLocator />} />
+
                 </Routes>
             </div>
 
-            {/* Hide Footer & NewsletterSignup on specific routes */}
+
             {!hideFooterRoutes.includes(location.pathname) && <NewsletterSignup />}
             <Footer />
         </div>
     );
 }
-
 function App() {
     return (
         <Router>
@@ -68,5 +72,4 @@ function App() {
         </Router>
     );
 }
-
 export default App;

@@ -7,12 +7,11 @@ import Services from './pages/LandingPage-components/services'
 const Home = () => {
   return (
     <div className=''>
-        <HeroSection/>
-        <Cards />
-        <Card2/>
-        <Services/>
+      <HeroSection />
+      <Cards />
+      <Card2 />
+      <Services />
     </div>
   )
-}
-
+} 
 export default Home

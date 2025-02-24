@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import OffcanvasImg from "../assets/d-hp-box3.webp";
+import OffcanvasImg from "../assets/d-hp-box2.webp";
 const SearchOffCanvas = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);

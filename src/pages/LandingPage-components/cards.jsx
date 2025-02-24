@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import Card1 from "../../assets/d-hp-box2.webp";
-import Card2 from "../../assets/d-hp-box3.webp";
+// import Card2 from "../../assets/hp-box3.webp";
 
 const cardItems = [
   { id: 1, image: Card1, title: "Sandals", link: "/" },
-  { id: 2, image: Card2, title: "Bags", link: "/" },
+  { id: 2, image: Card1, title: "Bags", link: "/" },
   { id: 3, image: Card1, title: "Shoes", link: "/" },
 ];
 
