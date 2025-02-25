@@ -40,7 +40,7 @@ function Layout() {
     }
 
     return (
-        <div>
+        <div className="">
             <div className="z-30">
                 <Header />
             </div>
