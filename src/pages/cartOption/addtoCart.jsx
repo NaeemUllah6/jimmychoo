@@ -3,7 +3,7 @@ import Cart1 from '../../assets/cart1.webp'
 import Cart2 from '../../assets/cart2.webp'
 import Cart3 from '../../assets/cart3.webp'
 import Cart4 from '../../assets/cart4.webp'
-const AddToCart = () => { // Fix: Renamed to PascalCase
+const AddToCart = () => { 
     const [selectedSize, setSelectedSize] = useState(null);
 
     const productData = {
@@ -21,14 +21,14 @@ const AddToCart = () => { // Fix: Renamed to PascalCase
 
     return (
         <div className=" mt-[110px] grid grid-cols-1 md:grid-cols-2 ">
-            {/* Left side (Images) */}
+            
             <div className="w-full h-full p-4">
                 {productData.images.map((img, index) => (
                     <img key={index} src={img} alt={`Product ${index + 1}`} className="w-full mb-4" />
                 ))}
             </div>
 
-            {/* Right side (Product Details) */}
+            
             <div className="w-full p-6 sticky top-[100px] h-fit bg-white shadow-lg">
                 <h1 className="text-2xl font-bold">{productData.name}</h1>
                 <p className="text-gray-600">{productData.description}</p>
@@ -58,4 +58,4 @@ const AddToCart = () => { // Fix: Renamed to PascalCase
     );
 };
 
-export default AddToCart; // Fix: Export renamed function
+export default AddToCart; 
