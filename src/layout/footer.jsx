@@ -18,7 +18,7 @@ const footerData = [
       { name: 'Shipping & Delivery', path: '/' },
       { name: 'Order Tracking', path: '/' },
       { name: 'Contact Us', path: '/' },
-      { name: 'FAQs', path: '/' }
+      { name: 'FAQs', path: '/faqs' }
     ]
   },
   {
