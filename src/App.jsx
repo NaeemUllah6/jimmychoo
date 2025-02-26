@@ -12,6 +12,7 @@ import NewsletterSignup from "./pages/LandingPage-components/signup";
 import Wishlist from "./pages/cartOption/wishlist";
 import Signup from "./pages/Authentication/signup";
 import LocationLocator from './pages/Authentication/locationlocator'
+import AddtoCart from "./pages/cartOption/addtoCart";
 
 function Loader() {
     return (
@@ -55,6 +56,7 @@ function Layout() {
                     <Route path="/wishlist" element={<Wishlist />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/locationLocator" element={<LocationLocator />} />
+                    <Route path="/addtoCart" element={<AddtoCart />} />
 
                 </Routes>
             </div>

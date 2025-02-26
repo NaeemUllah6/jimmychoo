@@ -5,6 +5,7 @@ import product1 from "../../assets/BONBONBCKTEWHUT_000702_FRONT_vg443.webp";
 import product2 from "../../assets/BONBONBCKTEWHUT_000702_FRONT_vg443.webp";
 import product3 from "../../assets/BONBONBCKTEWHUT_000702_FRONT_vg443.webp";
 import product4 from "../../assets/BONBONBCKTEWHUT_000702_FRONT_vg443.webp";
+import { Link } from "react-router-dom";
 
 const imagesArray = [product1, product2, product3, product4];
 
@@ -67,13 +68,14 @@ const Card = ({ product }) => {
 
 const ProductGrid = () => {
   return (
+   <Link to='/addtoCart'>
     <div className="w-full  mx-auto p-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
         {cardData.map((product) => (
           <Card key={product.id} product={product} />
         ))}
       </div>
-    </div>
+    </div></Link>
   );
 };
 
