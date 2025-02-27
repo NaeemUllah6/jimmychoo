@@ -10,3 +10,10 @@ body {
 Link{
     cursor: pointer;
 }
+body{
+    background-color: rgb(25, 25, 25);
+    color:#DFB83B;
+}
+body Link{
+    color:#DFB83B;
+}
