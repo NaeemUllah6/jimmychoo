@@ -39,7 +39,7 @@ const Footer = () => {
    <>
    <div>
    </div>
-    <div className=" bg-black">
+    <div className=" bg-[#2a2a2a">
      <div className='p-10 border-b-[0.1px] border-white'>
      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-6 gap-5">
         
