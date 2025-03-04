@@ -118,11 +118,11 @@ const Drawer = () => {
             </div>
 
             {subDrawerOpen && (
-                <div className={`fixed top-0 z-50 h-screen p-4 overflow-y-auto bg-white w-full md:w-60 transition-transform duration-500 border-l-2 border-[#DFB83B]`}>
+                <div className={`fixed top-0 z-50 h-screen p-4 md:left-80 overflow-y-auto bg-white w-full md:w-80 transition-transform duration-500 border-l-2 border-[#DFB83B]`}>
                     <div className="flex justify-between items-center mb-4">
                         <h5 className="text-lg font-semibold text-black">{selectedCategory ? selectedCategory : "JC World"}</h5>
                         <button
-                        className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-[#DFB83B] rounded-lg text-sm w-8 h-8 flex items-center justify-center"
+                        className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-[#DFB83B] rounded-lg text-sm w-8 h-8 flex md:hidden items-center justify-center"
                         onClick={closeAllDrawers}
                     >
                         <svg className="w-3 h-3" aria-hidden="true" fill="none" viewBox="0 0 14 14">
