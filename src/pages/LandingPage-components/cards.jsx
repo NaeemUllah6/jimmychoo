@@ -19,7 +19,7 @@ const Cards = () => {
               <Link className="relative text-base font-bold group" to={item.link}>
                 {item.title}
                 
-                <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-black transition-all duration-300 group-hover:w-0"></span>
+                <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-[#DFB83B] transition-all duration-300 group-hover:w-0"></span>
               </Link>
             </div>
           </div>

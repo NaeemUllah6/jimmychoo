@@ -69,30 +69,30 @@ const Drawer = () => {
                 <div className="flex items-center justify-between w-full">
                     <div className='flex gap-8 items-center'>
                         <button
-                            className={`text-xl flex items-center ${isScrolled ? "text-black" : "text-[#DFB83B]"}`}
+                            className={`text-xl flex items-center ${isScrolled ? "text-[#DFB83B]" : "text-[#DFB83B]"}`}
                             onClick={() => setIsOpen((prev) => !prev)}
                         >
-                            <i className="fa fa-bars"></i>
+                            <i className="fa fa-bars text-[#DFB83B]"></i>
                         </button>
-                      <ThirdOffcanvas/>
+                        <ThirdOffcanvas />
                     </div>
 
                     <img className="w-[100px] lg:w-[200px]" height={50} width={200} src={headerLogo} alt="Logo" />
 
                     <div className="flex items-center gap-9 z-20">
-                        <Link to='/wishlist'><i className={`fa fa-heart ${isScrolled ? "text-black" : "text-[#DFB83B]"}`}></i></Link>
+                        <Link to='/wishlist'><i className={`fa fa-heart ${isScrolled ? "text-[#DFB83B]" : "text-[#DFB83B]"}`}></i></Link>
                         <Link to='/login'>
-                            <i className={`fa fa-user ${isScrolled ? "text-black" : "text-[#DFB83B]"}`}></i>
+                            <i className={`fa fa-user ${isScrolled ? "text-[#DFB83B]" : "text-[#DFB83B]"}`}></i>
                         </Link>
-                      <Fourthoffcanvas/>
+                        <Fourthoffcanvas />
                     </div>
                 </div>
             </header>
 
-            <div className={`fixed top-0 left-0 z-50 h-screen p-4 overflow-y-auto bg-white w-80 transition-transform duration-500 ${isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 hidden"}`}>
+            <div className={`fixed top-0 left-0 z-50 h-screen p-4 overflow-y-auto bg-white w-full md:w-80 transition-transform duration-500 ${isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 hidden"}`}>
                 <div className="flex justify-between items-center mb-4">
                     <img height={50} width={150} src={headerLogo} alt="Logo" />
-                    
+
                     <button
                         className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-[#DFB83B] rounded-lg text-sm w-8 h-8 flex items-center justify-center"
                         onClick={closeAllDrawers}
@@ -103,7 +103,7 @@ const Drawer = () => {
                     </button>
                 </div>
 
-                <nav className="flex flex-col space-y-4">
+                <nav className="flex flex-col  space-y-4">
                     {navLinks.map((link, index) => (
                         <button
                             key={index}
@@ -118,9 +118,17 @@ const Drawer = () => {
             </div>
 
             {subDrawerOpen && (
-                <div className={`fixed top-0 left-80 z-50 h-screen p-4 overflow-y-auto bg-white w-80 transition-transform duration-500 border-l-2 border-[#DFB83B]`}>
+                <div className={`fixed top-0 z-50 h-screen p-4 overflow-y-auto bg-white w-full md:w-60 transition-transform duration-500 border-l-2 border-[#DFB83B]`}>
                     <div className="flex justify-between items-center mb-4">
                         <h5 className="text-lg font-semibold text-black">{selectedCategory ? selectedCategory : "JC World"}</h5>
+                        <button
+                        className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-[#DFB83B] rounded-lg text-sm w-8 h-8 flex items-center justify-center"
+                        onClick={closeAllDrawers}
+                    >
+                        <svg className="w-3 h-3" aria-hidden="true" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                    </button>
                     </div>
 
                     {selectedCategory && (
@@ -130,11 +138,12 @@ const Drawer = () => {
                                     key={idx}
                                     to={sub.path}
                                     className="text-[#DFB83B] hover:text-black transition"
+                                    onClick={closeAllDrawers}
                                 >
                                     {sub.name}
-                                    
+
                                 </Link>
-                                
+
                             ))}
                         </nav>
                     )}
