@@ -14,11 +14,12 @@ import Signup from "./pages/Authentication/signup";
 import LocationLocator from './pages/Authentication/locationlocator'
 import AddtoCart from "./pages/cartOption/addtoCart";
 import FaQ from "./faqs";
-
+import loaderIcon from './assets/footerLogo.png'
 function Loader() {
     return (
-        <div className="fixed inset-0 flex justify-center items-center bg-white z-50">
-            <div className="w-12 h-12 border-4 border-gray-300 border-t-[#DFB83B] rounded-full animate-spin"></div>
+        <div className="fixed inset-0 flex justify-center items-center bg-black z-50">
+            {/* <div className="w-12 h-12 border-4 border-gray-300 border-t-[#DFB83B] rounded-full animate-spin"></div> */}
+            <img className="h-40 w-40" src={loaderIcon} alt="" />
         </div>
     );
 }
