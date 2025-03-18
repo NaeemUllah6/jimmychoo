@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import card1 from "../../assets/d-hp-box5-jpn.jpg";
-// import card2 from "../../assets/d-hp-box6-jpn.jpg";
+import card1 from "../../assets/shoes1.webp";
+import card2 from "../../assets/shoes22.webp";
 
 const cards = [
   {
@@ -10,7 +10,7 @@ const cards = [
     linkText: "Shop Now",
   },
   {
-    image: card1,
+    image: card2,
     heading: "Discover New Arrivals",
     link: "/new-arrivals",
     linkText: "View More",

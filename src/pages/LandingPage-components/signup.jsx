@@ -1,6 +1,6 @@
 const NewsletterSignup = () => {
     return (
-      <div className="flex flex-col items-center text-center py-12 bg-gray-50 px-10">
+      <div className="flex flex-col items-center text-center py-12 bg-neutral-900 px-10">
         {/* Heading */}
         <h2 className="text-2xl font-bold !text-[#DFB83B]">Sign up for Jimmy Choo Updates</h2>
         <p className=" mt-2 !text-[#DFB83B]">
@@ -18,7 +18,7 @@ const NewsletterSignup = () => {
               placeholder="Enter your email address"
               className="w-full p-3 text-gray-700  outline-none placeholder:text-[#DFB83B]"
             />
-            <button className="bg-gray-200 px-4 text-lg !text-[#DFB83B]">&rarr;</button>
+            <button className="bg-neutral-800 px-4 text-lg !text-[#DFB83B]">&rarr;</button>
           </div>
         </div>
   
