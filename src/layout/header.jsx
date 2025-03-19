@@ -58,7 +58,7 @@ const Drawer = () => {
             <header
                 className={`fixed top-0 left-0 w-full flex items-center px-6 h-20 transition-transform duration-300 z-30
                     ${scrollDirection === "down" ? "-translate-y-full" : "translate-y-0 mt-[28px]"} 
-                    ${isScrolled ? "bg-white text-black shadow-md" : "bg-transparent text-[#DFB83B]"}`}
+                    ${isScrolled ? "bg-white  shadow-md" : "bg-transparent text-[#DFB83B]"}`}
             >
                 <div className="flex items-center justify-between w-full ">
                     <div className='flex gap-8 items-center'>
@@ -79,11 +79,11 @@ const Drawer = () => {
             </header>
 
             {/* Sidebar Drawer */}
-            <div className={`fixed top-0 left-0 z-50 h-screen p-4 overflow-y-auto bg-white w-full md:w-80 transition-transform duration-500 
+            <div className={`fixed top-0 left-0 z-50 h-screen p-4 overflow-y-auto bg-neutral-700 w-full md:w-80 transition-transform duration-500 
                 ${isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 hidden"}`}>
                 <div className="flex justify-between items-center mb-4">
                     <img height={50} width={150} src={headerLogo} alt="Logo" />
-                    <button className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-[#DFB83B] rounded-lg text-sm w-8 h-8 flex items-center justify-center"
+                    <button className="bg-transparent hover:text-[#DFB83B] rounded-lg text-sm w-8 h-8 flex items-center justify-center"
                         onClick={closeAllDrawers}>
                         <i className="fa fa-times"></i>
                     </button>
@@ -102,9 +102,9 @@ const Drawer = () => {
 
             {/* Subcategory Drawer */}
             {subDrawerOpen && (
-                <div className={`fixed top-0 z-50 h-screen p-4 md:left-80 overflow-y-auto bg-white w-full md:w-80 transition-transform duration-500 border-l-2 border-[#DFB83B]`}>
+                <div className={`fixed top-0 z-50 h-screen p-4 md:left-80 overflow-y-auto bg-neutral-700 w-full md:w-80 transition-transform duration-500 border-l-2 border-[#DFB83B]`}>
                     <div className="flex justify-between items-center mb-4">
-                        <h5 className="text-lg font-semibold text-black">{selectedCategory}</h5>
+                        <h5 className="text-lg font-semibold text-[#DFB83B]">{selectedCategory}</h5>
                         <button className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-[#DFB83B] rounded-lg text-sm w-8 h-8 flex md:hidden items-center justify-center"
                             onClick={closeAllDrawers}>
                             <i className="fa fa-times"></i>

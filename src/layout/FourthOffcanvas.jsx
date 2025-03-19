@@ -24,17 +24,17 @@ function ShoppingCart() {
       {/* Cart Icon */}
       <i
         className={`hidden md:block fa fa-shopping-cart cursor-pointer transition-colors duration-300 ${
-          isOpen ? "text-black" : "text-[#DFB83B]"
+          isOpen ? "text-[#DFB83B]" : "text-[#DFB83B]"
         }`}
         onClick={() => setIsOpen(true)}
       ></i>
 
       <div
-        className={`fixed top-0 right-0 h-full max-w-[550px] w-full md:w-[550px] bg-white shadow-lg transform transition-transform duration-300 z-50 ${
+        className={`fixed top-0 right-0 h-full max-w-[550px] w-full md:w-[550px] bg-neutal-600 shadow-lg transform transition-transform duration-300 z-50 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="bg-white h-screen">
+        <div className="bg-neutral-800 h-screen">
           <div className="flex items-center justify-between p-6 border-b">
             <h2 className="text-lg font-semibold">Shopping Cart</h2>
             <button onClick={() => setIsOpen(false)} className="text-2xl">
@@ -42,20 +42,20 @@ function ShoppingCart() {
             </button>
           </div>
 
-          <div className="flex flex-col justify-center items-center p-6 w-full mx-auto bg-white">
+          <div className="flex flex-col justify-center items-center p-6 w-full mx-auto bg-neutral-800">
             <h2 className="text-lg font-semibold text-center">
               Your shopping bag is empty.
             </h2>
             <button
-              className="px-20 py-3 bg-white border border-black text-black hover:text-white hover:bg-black mt-4"
+              className="px-20 py-3 bg-[#DFB83B] border border-black text-white hover:text-white hover:bg-black mt-4"
               onClick={() => setIsOpen(false)}
             >
               Continue Shopping
             </button>
           </div>
 
-          <div className="w-fit pt-5 bg-white">
-            <p className="border-b pb-4 font-bold text-black w-full mx-4">
+          <div className="w-fit pt-5 bg-neutral-800">
+            <p className="border-b pb-4 font-bold text-[#DFB83B] w-full mx-4">
               Especially for you
             </p>
           </div>
@@ -87,13 +87,13 @@ function ShoppingCart() {
 
             <div className="flex justify-start items-center mt-6 gap-9">
               <button
-                className="custom-prev text-black text-sm p-1 cursor-pointer rounded-full"
+                className="custom-prev text-white text-sm p-1 cursor-pointer rounded-full"
                 onClick={() => swiperRef.current.swiper.slidePrev()}
               >
                 <i className="fa fa-chevron-left"></i>
               </button>
               <button
-                className="custom-next text-black text-sm p-1 cursor-pointer rounded-full"
+                className="custom-next text-white text-sm p-1 cursor-pointer rounded-full"
                 onClick={() => swiperRef.current.swiper.slideNext()}
               >
                 <i className="fa fa-chevron-right"></i>

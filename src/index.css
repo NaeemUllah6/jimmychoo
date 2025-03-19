@@ -17,3 +17,6 @@ body{
 body Link{
     color:#DFB83B;
 }
+button{
+    cursor:pointer
+}

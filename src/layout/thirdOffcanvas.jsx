@@ -42,11 +42,11 @@ const SearchOffCanvas = () => {
       </button>
 
       <div
-        className={`fixed top-0 left-0 h-full w-full md:max-w-[450px] bg-white shadow-lg transform ${
+        className={`fixed top-0 left-0 h-full w-full md:max-w-[450px] bg-neutral-700 shadow-lg transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out z-50`}
       >
-        <div className="bg-white h-screen">
+        <div className="bg-neutral-800 h-screen">
           <div className="p-4 flex justify-between items-center border-b">
             <input
               type="text"
@@ -93,13 +93,13 @@ const SearchOffCanvas = () => {
               {/* Custom Navigation Buttons */}
               <div className="flex justify-end items-center mr-4 mt-6 gap-7">
                 <button
-                  className="custom-prev text-black text-sm p-1 rounded-full cursor-pointer"
+                  className="custom-prev text-white text-sm p-1 rounded-full cursor-pointer"
                   onClick={() => swiperRef.current.swiper.slidePrev()}
                 >
                   <i className="fa fa-chevron-left"></i>
                 </button>
                 <button
-                  className="custom-next text-black text-sm p-1 rounded-full cursor-pointer"
+                  className="custom-next text-white text-sm p-1 rounded-full cursor-pointer"
                   onClick={() => swiperRef.current.swiper.slideNext()}
                 >
                   <i className="fa fa-chevron-right"></i>

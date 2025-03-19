@@ -20,20 +20,20 @@ const AddToCart = () => {
     };
 
     return (
-        <div className=" mt-[110px] grid grid-cols-1 md:grid-cols-2 ">
+        <div className=" mt-[110px] grid grid-cols-1 md:grid-cols-2 items-start gap-2">
             
-            <div className="w-full h-full p-4">
+            <div className="w-full h-full">
                 {productData.images.map((img, index) => (
                     <img key={index} src={img} alt={`Product ${index + 1}`} className="w-full mb-4" />
                 ))}
             </div>
 
             
-            <div className="w-full p-6 sticky top-[100px] h-fit bg-white shadow-lg">
+            <div className="w-full p-6 sticky top-[100px] h-fit bg-neutral-800 shadow-lg">
                 <h1 className="text-2xl font-bold">{productData.name}</h1>
-                <p className="text-gray-600">{productData.description}</p>
+                <p className="text-[#DFB83B]">{productData.description}</p>
                 <p className="text-xl font-semibold mt-2">{productData.price}</p>
-                <p className="text-gray-500 mt-1"><strong>Colour:</strong> {productData.color}</p>
+                <p className="text-[#DFB83B] mt-1"><strong>Colour:</strong> {productData.color}</p>
 
                 <div className="mt-4">
                     <h3 className="text-md font-semibold mb-2">Size:</h3>
@@ -41,7 +41,7 @@ const AddToCart = () => {
                         {productData.sizes.map((size) => (
                             <button
                                 key={size}
-                                className={`p-2 border ${selectedSize === size ? "bg-black text-white" : "border-gray-300"} rounded`}
+                                className={`p-2 border ${selectedSize === size ? "bg-[#DFB83B] text-white" : "border-gray-300"} rounded`}
                                 onClick={() => setSelectedSize(size)}
                             >
                                 {size}
@@ -50,7 +50,7 @@ const AddToCart = () => {
                     </div>
                 </div>
 
-                <button className="mt-6 w-full p-3 bg-black text-white font-semibold rounded">
+                <button className="mt-6 w-full p-3 bg-[#DFB83B] text-white font-semibold rounded">
                     SELECT SIZE
                 </button>
             </div>
