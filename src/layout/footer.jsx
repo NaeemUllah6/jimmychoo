@@ -41,7 +41,7 @@ const Footer = () => {
    </div>
     <div className=" bg-[#2a2a2a">
      <div className='p-10 border-b-[0.1px] border-white'>
-     <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-6 gap-5">
+     <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-5">
         
         <div className="cols-span-2 lg:col-span-3">
           <img width={80} height={80} src={FooterLogo} alt="Footer Logo" />

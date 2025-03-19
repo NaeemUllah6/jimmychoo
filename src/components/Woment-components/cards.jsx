@@ -24,7 +24,7 @@ const Card = ({ product }) => {
 
   return (
     <div
-      className="relative w-full bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden transition-transform "
+      className="relative w-full bg-neutral-700 border p-4 border-gray-300 rounded-lg shadow-amber-50 overflow-hidden transition-transform "
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -48,8 +48,8 @@ const Card = ({ product }) => {
       </div>
 
       <div className="p-4 text-center">
-        <h3 className="text-lg font-semibold text-gray-900">{product.title}</h3>
-        <p className="text-gray-600 text-md font-medium">{product.price}</p>
+        <h3 className="text-lg font-semibold text-[#DFB83B]">{product.title}</h3>
+        <p className=" text-md font-medium text-[#DFB83B]">{product.price}</p>
       </div>
 
       {isHovered && (
@@ -69,8 +69,8 @@ const Card = ({ product }) => {
 const ProductGrid = () => {
   return (
    <Link to='/addtoCart'>
-    <div className="w-full  mx-auto p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+    <div className="w-full  mx-auto p-4 shadow-md shadow-amber-100">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {cardData.map((product) => (
           <Card key={product.id} product={product} />
         ))}

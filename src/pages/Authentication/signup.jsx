@@ -88,7 +88,7 @@ const Signup = () => {
 }}
 className="pb-5 pt-[20px]"
 >
-     <form id="formSubmita" onSubmit={handleSubmit} className="p-8 mx-3 mt-[150px] bg-white  max-w-lg md:mx-auto border rounded-none-lg shadow-md">
+     <form id="formSubmita" onSubmit={handleSubmit} className="p-8 mx-3 mt-[150px] bg-neutral-800  max-w-lg md:mx-auto border rounded-none-lg shadow-md">
       <h2 className="text-xl font-bold pb-6">Sign Up</h2>
       <p className="mb-4 text-sm">Enjoy a more personalized shopping experience with a Jimmy Choo account.</p>
 
@@ -187,7 +187,7 @@ className="pb-5 pt-[20px]"
       </div>
     
      
-  <button type="submit" className="bg-black text-white p-2 rounded-none w-full">
+  <button type="submit" className="bg-[#DFB83B] text-white p-2 rounded-none w-full">
     Sign Up
   </button>
     </form >

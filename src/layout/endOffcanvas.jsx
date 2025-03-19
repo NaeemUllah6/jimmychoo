@@ -1,17 +1,17 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const TopBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <div className="bg-black h-7 px-6 fixed top-0 w-full flex gap-3 items-center justify-between z-30">
-        <div className="items-center gap-4 hidden md:flex w-full">
+      <div className="bg-neutral-800 h-7 px-6 fixed top-0 w-full flex gap-3 items-center justify-between z-30">
+        {/* <div className="items-center gap-4 hidden md:flex w-full">
           <i className="fa fa-location-dot text-[#DFB83B] text-xs"></i>
           <Link to="/locationLocator" className="text-xs text-[#DFB83B] hidden md:block">Store Locator</Link>
-        </div>
-        <div className="flex items-center gap-4 justify-center w-full">
+        </div> */}
+        <div className="flex items-center gap-4 justify-start w-full">
           <p className="text-xs text-[#DFB83B]">Discover the Spring 2025 Collection</p>
           <i className="fa text-xs fa-chevron-right text-[#DFB83B]"></i>
         </div>

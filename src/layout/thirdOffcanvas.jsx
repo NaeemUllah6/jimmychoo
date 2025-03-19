@@ -42,7 +42,7 @@ const SearchOffCanvas = () => {
       </button>
 
       <div
-        className={`fixed top-0 left-0 h-full max-w-[550px] bg-white shadow-lg transform ${
+        className={`fixed top-0 left-0 h-full w-full md:max-w-[450px] bg-white shadow-lg transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out z-50`}
       >
