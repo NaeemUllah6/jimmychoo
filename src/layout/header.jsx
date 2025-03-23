@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import headerLogo from "../assets/logo2.png";
+import headerLogo from "../assets/MainLogo.png";
 import SecondOffCanvas from "./endOffcanvas";
 import ThirdOffcanvas from "./thirdOffcanvas";
 import Fourthoffcanvas from './FourthOffcanvas';
@@ -11,7 +11,7 @@ const Drawer = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [isScrolled, setIsScrolled] = useState(false);
     const [scrollDirection, setScrollDirection] = useState("up");
-    
+
     const prevScrollY = useRef(0);
 
     useEffect(() => {
@@ -19,10 +19,10 @@ const Drawer = () => {
             const currentScrollY = window.scrollY;
 
             if (currentScrollY > prevScrollY.current) {
-                // Scrolling Down
+
                 setScrollDirection("down");
             } else {
-                // Scrolling Up
+
                 setScrollDirection("up");
             }
 
@@ -61,28 +61,31 @@ const Drawer = () => {
                     ${isScrolled ? "bg-white  shadow-md" : "bg-transparent text-[#DFB83B]"}`}
             >
                 <div className="flex items-center justify-between w-full ">
-                    <div className='flex gap-8 items-center'>
+                    <div className='flex gap-6 items-center'>
                         <button className="text-xl flex items-center text-[#DFB83B]" onClick={() => setIsOpen(true)}>
                             <i className="fa fa-bars"></i>
                         </button>
                         <ThirdOffcanvas />
                     </div>
 
-                    <img className="w-[100px] lg:w-[200px]" src={headerLogo} alt="Logo" />
+                    <Link to='/'>
+                        <img className={`w-[100px] lg:w-[200px]`} src={headerLogo} alt="Logo" />
+                    </Link>
 
-                    <div className="flex items-center gap-9 z-20">
-                        <Link to='/wishlist'><i className="fa fa-heart text-[#DFB83B]"></i></Link>
-                        <Link to='/login'><i className="fa fa-user text-[#DFB83B]"></i></Link>
+                    <div className="flex items-center gap-6 z-20">
+                        <Link className="" to='/wishlist'><i className="fa fa-heart text-[#DFB83B]"></i></Link>
+                        <Link className="hidden md:block" to='/login'><i className="fa fa-user text-[#DFB83B]"></i></Link>
                         <Fourthoffcanvas />
                     </div>
                 </div>
             </header>
 
-            {/* Sidebar Drawer */}
             <div className={`fixed top-0 left-0 z-50 h-screen p-4 overflow-y-auto bg-neutral-700 w-full md:w-80 transition-transform duration-500 
                 ${isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 hidden"}`}>
                 <div className="flex justify-between items-center mb-4">
-                    <img height={50} width={150} src={headerLogo} alt="Logo" />
+                    <Link to='/'>
+                        <img height={50} width={150} src={headerLogo} alt="Logo" />
+                    </Link>
                     <button className="bg-transparent hover:text-[#DFB83B] rounded-lg text-sm w-8 h-8 flex items-center justify-center"
                         onClick={closeAllDrawers}>
                         <i className="fa fa-times"></i>
@@ -100,7 +103,6 @@ const Drawer = () => {
                 </nav>
             </div>
 
-            {/* Subcategory Drawer */}
             {subDrawerOpen && (
                 <div className={`fixed top-0 z-50 h-screen p-4 md:left-80 overflow-y-auto bg-neutral-700 w-full md:w-80 transition-transform duration-500 border-l-2 border-[#DFB83B]`}>
                     <div className="flex justify-between items-center mb-4">
@@ -113,7 +115,7 @@ const Drawer = () => {
 
                     <nav className="flex flex-col space-y-3">
                         {navLinks.find(link => link.name === selectedCategory)?.subCategories.map((sub, idx) => (
-                            <Link key={idx} to={sub.path} className="text-[#DFB83B] hover:text-black transition"
+                            <Link key={idx} to={sub.path} className="text-[#DFB83B] hover:text-yellow-600 transition"
                                 onClick={closeAllDrawers}>
                                 {sub.name}
                             </Link>
@@ -122,7 +124,6 @@ const Drawer = () => {
                 </div>
             )}
 
-            {/* Overlay */}
             {(isOpen || subDrawerOpen) && (
                 <div className="fixed inset-0 bg-black opacity-50 z-40" onClick={closeAllDrawers}></div>
             )}

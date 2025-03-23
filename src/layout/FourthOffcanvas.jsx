@@ -22,12 +22,17 @@ function ShoppingCart() {
   return (
     <div>
       {/* Cart Icon */}
-      <i
-        className={`hidden md:block fa fa-shopping-cart cursor-pointer transition-colors duration-300 ${
+      <div
+        className={`cursor-pointer transition-colors duration-300 ${
           isOpen ? "text-[#DFB83B]" : "text-[#DFB83B]"
         }`}
         onClick={() => setIsOpen(true)}
-      ></i>
+      >
+        <svg className={`${isOpen ? "!text-[#DFB83B]" : "!text-[#DFB83B]"}`} width="30" height="30" viewBox="0 0 24 24" fill="none" version="1.1" id="svg4">
+  <defs id="defs8"></defs>
+  <path fillRule="evenodd" clipRule="evenodd" d="m 9.06043,8.51081 v 1.82314 h 1 V 8.51081 h 3.874 v 1.82834 h 1 V 8.51081 h 1.2234 l 0.4672,9.30154 H 7.37496 L 7.84214,8.51081 Z m 5.7555,-1 h 1.8174 0.4756 l 0.0238,0.47491 0.5174,10.30153 0.0264,0.5251 H 17.15083 6.84922 6.32347 L 6.34984,18.28725 6.86725,7.98572 6.8911,7.51081 H 7.36662 9.15093 C 9.20913,7.26858 9.30615,6.96604 9.46835,6.65942 9.85454,5.92933 10.61263,5.18765 11.98703,5.18765 c 1.3863,0 2.1466,0.78446 2.5321,1.53709 0.1426,0.27829 0.2358,0.55333 0.2968,0.78607 z m -1.0452,0 c -0.0383,-0.10772 -0.0849,-0.21942 -0.1416,-0.33014 -0.2625,-0.51242 -0.7259,-0.99302 -1.6421,-0.99302 -0.928,0 -1.3832,0.46388 -1.6347,0.93935 -0.0685,0.12947 -0.1216,0.26042 -0.1625,0.38381 z" fill="#DFB83B" id="path2"></path>
+</svg>
+      </div>
 
       <div
         className={`fixed top-0 right-0 h-full max-w-[550px] w-full md:w-[550px] bg-neutal-600 shadow-lg transform transition-transform duration-300 z-50 ${

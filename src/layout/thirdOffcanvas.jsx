@@ -42,7 +42,7 @@ const SearchOffCanvas = () => {
       </button>
 
       <div
-        className={`fixed top-0 left-0 h-full w-full md:max-w-[450px] bg-neutral-700 shadow-lg transform ${
+        className={`fixed top-0 left-0 h-screen w-full md:max-w-[450px]  z-50 shadow-lg transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out z-50`}
       >
@@ -75,7 +75,7 @@ const SearchOffCanvas = () => {
                 slidesPerView={4}
                 spaceBetween={15}
                 freeMode={true}
-                navigation={false} // Disabled default navigation to prevent double icons
+                navigation={false} 
                 modules={[FreeMode, Navigation]}
                 className="mt-2"
               >
@@ -111,7 +111,7 @@ const SearchOffCanvas = () => {
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setIsOpen(false)}></div>
+        <div className="fixed inset-0 bg-black opacity-50 z-40 h-screen" onClick={() => setIsOpen(false)}></div>
       )}
     </>
   );

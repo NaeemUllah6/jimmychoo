@@ -15,11 +15,13 @@ import LocationLocator from './pages/Authentication/locationlocator'
 import AddtoCart from "./pages/cartOption/addtoCart";
 import FaQ from "./faqs";
 import loaderIcon from './assets/footerLogo.png'
+import ContactUs from "./pages/LandingPage-components/contactus";
+import PrivacyPolicy from "./pages/LandingPage-components/PrivacyPolicy";
 function Loader() {
     return (
         <div className="fixed inset-0 flex justify-center items-center bg-black z-50">
             {/* <div className="w-12 h-12 border-4 border-gray-300 border-t-[#DFB83B] rounded-full animate-spin"></div> */}
-            <img className="h-40 w-40" src={loaderIcon} alt="" />
+            <img className="h-100 w-100" src={loaderIcon} alt="" />
         </div>
     );
 }
@@ -60,6 +62,10 @@ function Layout() {
                     <Route path="/locationLocator" element={<LocationLocator />} />
                     <Route path="/addtoCart" element={<AddtoCart />} />
                     <Route path="/faqs" element={<FaQ />} />
+                    <Route path="/contactus" element={<ContactUs/>} />
+                    <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
+
+                    
 
                 </Routes>
             </div>

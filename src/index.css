@@ -18,5 +18,7 @@ body Link{
     color:#DFB83B;
 }
 button{
-    cursor:pointer
+    cursor:pointer;
+    transition: all;
+    transition-duration: 0.5s;
 }
