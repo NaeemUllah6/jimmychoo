@@ -3,7 +3,7 @@ import Facebook from '../assets/facebook.png'
 import Instagram from '../assets/instagram.png'
 import Twitter from '../assets/tiktok.png'
 import { Link } from 'react-router-dom'
-import NewsletterSignup from '../pages/LandingPage-components/signup'
+// import NewsletterSignup from '../pages/LandingPage-components/signup'
 import CountrySelection from './endOffcanvas'
 
 const footerData = [
@@ -15,16 +15,16 @@ const footerData = [
       { name: 'Help Center', path: '/' },
       { name: 'Returns & Exchanges', path: '/' },
       { name: 'Shipping & Delivery', path: '/' },
-      { name: 'Order Tracking', path: '/' },
+      { name: 'Order Tracking', path: '/login' },
       { name: 'Contact Us', path: '/contactus' },
-      { name: 'FAQs', path: '/faqs' }
+      { name: 'Size Guide', path: '/sizeGuide' }
     ]
   },
   {
     title: 'Our Company',
     // Company : Company,
     links: [
-      { name: 'About Us', path: '/' },
+      { name: 'About Us', path: '/aboutus' },
       { name: 'Careers', path: '/' },
       { name: 'Privacy Policy', path: '/PrivacyPolicy' },
       { name: 'Terms & Conditions', path: '/' },
@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
      </div>
      <div className='p-10'>
-      <p className='text-[#DFB83B] font-medium text-xs'>Copyright @Jimmychoo</p>
+      <p className='text-[#DFB83B] font-medium text-xs'>Copyright @Rigz2Riche$</p>
      </div>
     </div>
    </>

@@ -17,6 +17,9 @@ import FaQ from "./faqs";
 import loaderIcon from './assets/footerLogo.png'
 import ContactUs from "./pages/LandingPage-components/contactus";
 import PrivacyPolicy from "./pages/LandingPage-components/PrivacyPolicy";
+import SizeGuide from "./pages/LandingPage-components/sizeGuide";
+import Aboutus from "./pages/LandingPage-components/Aboutus";
+
 function Loader() {
     return (
         <div className="fixed inset-0 flex justify-center items-center bg-black z-50">
@@ -39,6 +42,9 @@ function Layout() {
 
         return () => clearTimeout(timer);
     }, []);
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [location.pathname]);
 
     if (loading) {
         return <Loader />;
@@ -64,6 +70,9 @@ function Layout() {
                     <Route path="/faqs" element={<FaQ />} />
                     <Route path="/contactus" element={<ContactUs/>} />
                     <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
+                    <Route path="/sizeGuide" element={<SizeGuide/>} />
+                    <Route path="/aboutus" element={<Aboutus/>} />
+
 
                     
 

@@ -2,7 +2,7 @@ const NewsletterSignup = () => {
   return (
     <div className="flex flex-col items-center text-center py-12 bg-neutral-900 px-10">
       {/* Heading */}
-      <h2 className="text-2xl font-bold !text-[#DFB83B]">Sign up for Jimmy Choo Updates</h2>
+      <h2 className="text-2xl font-bold !text-[#DFB83B]">Sign up for Rigz 2 Riche$ Updates</h2>
       <p className=" mt-2 !text-[#DFB83B]">
         Be first to receive early access to our latest collections, <br /> exclusive events and news
       </p>
