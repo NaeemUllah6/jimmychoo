@@ -41,7 +41,7 @@ const OrderStatusReturns = () => {
                         <p className="text-[#DFB83B] mt-2">
                             If you wish to receive a refund or exchange, please book here. <br />
                             <span className="font-semibold">
-                                Please note: a Jimmy Choo account is not required to request a
+                                Please note: a Rigz 2 Riche$ account is not required to request a
                                 return or exchange.
                             </span>
                         </p>

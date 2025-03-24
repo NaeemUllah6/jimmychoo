@@ -44,7 +44,7 @@ const ContactUs = () => {
       <div className="text-center py-12 px-4">
         <h2 className="text-2xl font-bold">Contact Us</h2>
         <p className="text-[#DFB83B] mt-2">
-          Welcome to Jimmy Choo. <br />
+          Welcome to Rigz 2 Riche$. <br />
           Complete the form below to contact our Customer Service team.
         </p>
 

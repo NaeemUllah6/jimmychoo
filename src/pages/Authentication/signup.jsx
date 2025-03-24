@@ -90,7 +90,7 @@ className="pb-5 pt-[20px]"
 >
      <form id="formSubmita" onSubmit={handleSubmit} className="p-8 mx-3 mt-[150px] bg-neutral-800  max-w-lg md:mx-auto border rounded-none-lg shadow-md">
       <h2 className="text-xl font-bold pb-6">Sign Up</h2>
-      <p className="mb-4 text-sm">Enjoy a more personalized shopping experience with a Jimmy Choo account.</p>
+      <p className="mb-4 text-sm">Enjoy a more personalized shopping experience with a Rigz 2 Riche$ account.</p>
 
       <div className="grid grid-cols-2 gap-2 mb-3">
         <div>
@@ -175,12 +175,12 @@ className="pb-5 pt-[20px]"
       <div className="flex flex-col gap-3">
         <div className="flex gap-2">
           <input id="radio1" type="checkbox" name='checkbox' />
-          <label htmlFor="radio1">I have read and understood the Privacy Policy regarding the processing of my personal information by Jimmy Choo
+          <label htmlFor="radio1">I have read and understood the Privacy Policy regarding the processing of my personal information by Rigz 2 Riche$
           </label>
         </div>
         <div className="flex gap-2">
           <input id="radio2" type="checkbox" name='radio' />
-          <label htmlFor="radio2">I have read and understood the Privacy Policy regarding the processing of my personal information by Jimmy Choo
+          <label htmlFor="radio2">I have read and understood the Privacy Policy regarding the processing of my personal information by Rigz 2 Riche$
           </label>
         </div>
 

@@ -5,7 +5,7 @@ const privacyPolicyContent = [
   {
     title: "Introduction",
     content:
-      "Jimmy Choo values its customers and respects their privacy. This Privacy Policy explains how we collect, use, and protect your personal information.",
+      "Rigz 2 Riche$ values its customers and respects their privacy. This Privacy Policy explains how we collect, use, and protect your personal information.",
   },
   {
     title: "What information we collect",

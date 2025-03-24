@@ -5,7 +5,7 @@ const SignIn = () => {
       <div className="bg-neutral-600 px-10 py-4 rounded-lg shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4">Sign up</h2>
         <p className="text-[#DFB83B] mb-4">
-          Enjoy a more personalized shopping experience with a Jimmy Choo account
+          Enjoy a more personalized shopping experience with a Rigz 2 Riche$ account
         </p>
   
         <ul className="text-[#DFB83B] mb-6">
