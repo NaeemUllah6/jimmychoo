@@ -1,36 +1,20 @@
-import { useState } from "react";
-import "@fortawesome/fontawesome-free/css/all.min.css"; 
-
-import product1 from "../../assets/BONBONBCKTEWHUT_000702_FRONT_vg443.webp";
-import product2 from "../../assets/BONBONBCKTEWHUT_000702_FRONT_vg443.webp";
-import product3 from "../../assets/BONBONBCKTEWHUT_000702_FRONT_vg443.webp";
-import product4 from "../../assets/BONBONBCKTEWHUT_000702_FRONT_vg443.webp";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
-
-const imagesArray = [product1, product2, product3, product4];
-
-const cardData = Array.from({ length: 52 }, (_, index) => ({
-  id: index + 1,
-  images: [
-    imagesArray[index % imagesArray.length], 
-    `https://source.unsplash.com/300x400/?heels,${index}`, 
-  ],
-  title: `Product ${index + 1}`,
-  price: `$${(index + 1) * 10}.00`,
-}));
+import "@fortawesome/fontawesome-free/css/all.min.css"; 
 
 const Card = ({ product }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className="relative w-full bg-neutral-700 border p-4 border-gray-300 rounded-lg shadow-amber-50 overflow-hidden transition-transform "
+      className="relative w-full bg-neutral-700 border p-4 border-gray-300 rounded-lg shadow-amber-50 overflow-hidden transition-transform"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative w-full h-[300px] overflow-hidden">
         <img
-          src={product.images[0]} 
+          src={product.image || "https://via.placeholder.com/300x400"}
           alt={product.title}
           className="w-full h-full object-cover"
         />
@@ -49,7 +33,7 @@ const Card = ({ product }) => {
 
       <div className="p-4 text-center">
         <h3 className="text-lg font-semibold text-[#DFB83B]">{product.title}</h3>
-        <p className=" text-md font-medium text-[#DFB83B]">{product.price}</p>
+        <p className="text-md font-medium text-[#DFB83B]">${product.price}</p>
       </div>
 
       {isHovered && (
@@ -67,15 +51,47 @@ const Card = ({ product }) => {
 };
 
 const ProductGrid = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    axios.get("https://fakestoreapi.com/products")
+      .then((response) => {
+        if (response.data.length === 0) {
+          throw new Error("No products found.");
+        }
+        setProducts(response.data);
+      })
+      .catch((error) => {
+        setError(error.message || "Failed to fetch products.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
   return (
-   <Link to='/addtoCart'>
-    <div className="w-full  mx-auto p-4 shadow-md shadow-amber-100">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {cardData.map((product) => (
-          <Card key={product.id} product={product} />
-        ))}
-      </div>
-    </div></Link>
+    <div className="w-full mx-auto p-4 shadow-md shadow-amber-100">
+      {loading && <p className="text-center text-[#DFB83B]">Loading products...</p>}
+      {error && <p className="text-center text-red-500">{error}</p>}
+      
+      {!loading && !error && (
+        <>
+          <p className="text-center text-[#DFB83B] pb-5">
+            Total Products: {products.length}
+          </p>
+
+          <Link to="/addtoCart">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {products.map((product) => (
+                <Card key={product.id} product={product} />
+              ))}
+            </div>
+          </Link>
+        </>
+      )}
+    </div>
   );
 };
 

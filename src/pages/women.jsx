@@ -20,9 +20,7 @@ const Women = () => {
               </Link>
           ))}
       </div>
-      <div>
-          <p className="text-base font-medium text-[#DFB83B]">805 Products</p>
-      </div>
+
       <div>
           <p className="text-base font-medium text-[#DFB83B]">Sort By</p>
       </div>

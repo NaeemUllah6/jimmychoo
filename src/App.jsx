@@ -68,14 +68,10 @@ function Layout() {
                     <Route path="/locationLocator" element={<LocationLocator />} />
                     <Route path="/addtoCart" element={<AddtoCart />} />
                     <Route path="/faqs" element={<FaQ />} />
-                    <Route path="/contactus" element={<ContactUs/>} />
-                    <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
-                    <Route path="/sizeGuide" element={<SizeGuide/>} />
-                    <Route path="/aboutus" element={<Aboutus/>} />
-
-
-                    
-
+                    <Route path="/contactus" element={<ContactUs />} />
+                    <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+                    <Route path="/sizeGuide" element={<SizeGuide />} />
+                    <Route path="/aboutus" element={<Aboutus />} />
                 </Routes>
             </div>
 
